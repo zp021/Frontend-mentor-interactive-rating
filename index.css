@@ -13,4 +13,112 @@
     --clr-medium-gray: hsl(216, 12%, 54%);
     --clr-blue: hsl(216, 12%, 54%);
     --clr-dark-blue: hsl(216, 12%, 8%);
+
+    --clr-rating-background: #272e38;
+}
+
+body {
+    background-color: var(--clr-dark-blue);
+    font-family: "Overpass", sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2 {
+    color: var(--clr-white);
+}
+
+p {
+    color: var(--clr-light-gray);
+}
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+ul, li, button {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn {
+    background-color: var(--clr-rating-background);
+    color: var(--clr-light-gray);
+    width: 2.625rem;
+    height: 2.625rem;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--clr-orange);
+    color: var(--clr-white);
+}
+
+.btn:focus {
+    background-color: var(--clr-medium-gray);
+    color: var(--clr-white);
+}
+
+.btn-submit {
+    background-color: var(--clr-orange);
+    border: none;
+    border-radius: 1.875rem;
+    padding: 0.5rem 2rem;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    transition:  0.3s ease-in-out;
+}
+
+.btn-submit:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
+
+.rating-container, .thank-you-container {
+    background: linear-gradient(0deg, #171e28, #232a34);
+    width: 330px;
+    height: 360px;
+    padding: 1.563rem;
+    border-radius: 1.5rem;
+}
+
+.rating-container img {
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: var(--clr-rating-background);
+    margin-bottom: 0.75rem;
+}
+
+.rating-container h1 {
+    margin-bottom: 0.75rem;
+}
+
+.rating-container p {
+    margin-bottom: 1.5rem;
+}
+
+.rating-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
