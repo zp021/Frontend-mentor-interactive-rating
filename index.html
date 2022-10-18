@@ -10,35 +10,46 @@
 
 </head>
 <body>
-
+  <main>
   <!-- Rating state start -->
+    <div class="rating-container">
+      <img src="./images/icon-star.svg" alt="">
+      <h1>How did we do?</h1>
 
-  How did we do?
+      <p>
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p> 
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+      <ul>
+        <li><button class="btn">1</button></li>
+        <li><button class="btn">2</button></li>
+        <li><button class="btn">3</button></li>
+        <li><button class="btn">4</button></li>
+        <li><button class="btn">5</button></li>
+      </ul>
 
-  1 2 3 4 5
+      <button class="btn-submit" id="submit-rating">Submit</button>
 
-  Submit
-
+    </div>
   <!-- Rating state end -->
 
   <!-- Thank you state start -->
+    <div class="thank-you-container hidden">
+      <button class="btn-submit" id="back"></button>
+      <img src="./images/illustration-thank-you.svg" alt="">
+      <p>You selected <span id="rating"></span> out of 5</p> 
 
-  You selected <!-- Add rating here --> out of 5
+      <h2>Thank you!</h2> 
 
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
+      <p>
+        We appreciate you taking the time to give a rating. If you ever need more support, 
+        don’t hesitate to get in touch!
+      </p> 
+    </div>
   <!-- Thank you state end -->
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </main>
+  <script src="index.js"></script>
 </body>
 </html>
