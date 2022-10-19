@@ -87,7 +87,12 @@ button {
     transition:  0.3s ease-in-out;
 }
 
-.btn-submit:hover{
+.btn-submit:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.btn-submit:hover:not(:disabled){
     background-color: var(--clr-white);
     color: var(--clr-orange);
 }
