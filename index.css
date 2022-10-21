@@ -20,6 +20,7 @@
 body {
     background-color: var(--clr-dark-blue);
     font-family: "Overpass", sans-serif;
+    font-weight: 400;
     font-size: 15px;
     min-height: 100vh;
 
@@ -36,6 +37,7 @@ h1, h2 {
 p {
     color: var(--clr-light-gray);
 }
+
 img {
     max-width: 100%;
 }
@@ -48,6 +50,8 @@ ul, li, button {
     font-family: inherit;
     font-size: 1rem;
 }
+
+/* Buttons */
 
 button {
     cursor: pointer;
@@ -73,17 +77,19 @@ button {
 .btn:focus {
     background-color: var(--clr-medium-gray);
     color: var(--clr-white);
+    outline: var(--clr-white) 0.1rem solid;
 }
 
 .btn-submit {
     background-color: var(--clr-orange);
-    border: none;
-    border-radius: 1.875rem;
-    padding: 0.5rem 2rem;
+    font-size: 0.875rem;
     color: var(--clr-white);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.875rem;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.5rem 2rem;
     transition:  0.3s ease-in-out;
 }
 
@@ -99,15 +105,34 @@ button {
 
 .rating-container #submit-button {
    width: 100%;
+   padding: 16.5px 0 12.5px;
    margin-top: 1.5rem;
 }
 
+.thank-you-container #back-button {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+
+.thank-you-container #back-button i {
+    margin-right: 0.125rem;
+    transition: 0.3s ease-in-out;
+}
+
+.thank-you-container #back-button:hover i {
+    transform: translateX(-5px);
+}
+
+/* Containers */
+
 .rating-container, .thank-you-container {
-    background: linear-gradient(0deg, #171e28, #232a34);
+    background: linear-gradient(to bottom,#232a34, #171e28 );
     width: 330px;
     height: 360px;
     padding: 1.563rem;
-    border-radius: 1.5rem;
+    border-radius: 0.8rem;
 }
 
 .rating-container img {
@@ -118,10 +143,18 @@ button {
 }
 
 .rating-container h1 {
-    margin-bottom: 0.75rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    letter-spacing: 0.4px;
+    margin-bottom: 0.5rem;
 }
 
 .rating-container p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding-right: 0.5rem;
+    letter-spacing: -0.25px;
     margin-bottom: 1.5rem;
 }
 
@@ -156,25 +189,73 @@ button {
 }
 
 .thank-you-container h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
 }
 
 .thank-you-container p {
+    letter-spacing: -0.25px;
     text-align: center;
 }
 
-.thank-you-container #back-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-}
+/* media queries */
 
-.thank-you-container #back-button i {
-    margin-right: 0.125rem;
-    transition: 0.3s ease-in-out;
-}
+@media (min-width: 40em) {
+    .rating-container, .thank-you-container {
+        border-radius: 2rem;
+        width: 25.75rem;
+        height: 25.75rem;
+        padding: 2rem;
+    }
 
-.thank-you-container #back-button:hover I {
-    transform: translateX(-5px);
+    .rating-container img {
+        padding: 1rem;
+        margin-bottom: 1.35rem;
+    }
+
+    .rating-container h1 {
+        font-size: 1.688rem;
+        line-height: 1.6;
+        margin-bottom: 0.313rem;
+    }
+
+    .rating-container p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .rating-container #submit-button {
+        width: 100.5%;
+        padding: 16px 0 13px;
+        margin-top: 1.75rem;
+    }
+
+    .btn {
+        width: 3.188rem;
+        height: 3.188rem;
+    }
+
+    .thank-you-container img {
+        width: 10.125rem;
+        margin-bottom: 1.688rem;
+    }
+
+    .thank-you-container h2 {
+        font-size: 1.688rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .thank-you-container .user-rating {
+        padding: 0.5 1.125rem;
+        margin-bottom: 1rem;
+    }
+
+    
+    .thank-you-container p {
+        font-size: 1rem;
+        line-height: 1.4;
+        letter-spacing: 0px;
+    }
 }
