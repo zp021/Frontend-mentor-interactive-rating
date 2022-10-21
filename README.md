@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/interactive-rating-component-solution-kmeoG9uGeW)
 - [Live site](https://zp021-frontend-mentor-rating.netlify.app/)
 
 ## My process
